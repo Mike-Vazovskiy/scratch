@@ -1,0 +1,254 @@
+@charset 'utf-8'
+
+
+// Colors
+$black: #000
+
+
+// Mixins
+@mixin black()
+    color: $black
+
+
+// Main styles
+*
+    border: 0
+    box-sizing: border-box
+    outline: none
+    padding: 0
+    margin: 0
+    vertical-align: baseline
+    font-family: 'SF UI Text Regular', Verdana, Geneva, Tahoma, sans-serif
+ol, ul
+    li
+        list-style-type: none
+table
+    border-collapse: collapse
+    border-spacing: 0
+img
+    height: auto
+    max-width: 100%
+a
+    text-decoration: none
+html, body
+    background-color: #101010
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center top
+    padding-bottom: 20px
+.wrapper
+    max-width: 350px
+    width: 100%
+    margin: 0 auto
+    @media screen and (max-width: 1180px)
+        padding-left: 20px
+        padding-right: 20px
+
+
+.header
+    padding-top: 42px
+    @media screen and ( max-width: 560px )
+        padding-top: 0px
+    .wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+    &__logo
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 32px
+        &_img
+            height: 68px
+    &__text
+        &_bonus
+            margin-bottom: 11px
+            font-weight: 800
+            font-size: 28px
+            text-align: center
+            letter-spacing: 0.02em
+            color: #000
+            @media screen and ( max-width: 560px )
+                font-size: 20px
+                line-height: normal
+        &_max
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            padding-top: 12px
+            padding-bottom: 6px
+            background: #000
+            font-weight: 800
+            font-size: 38px
+            text-align: center
+            letter-spacing: 0.02em
+            color: #fff
+
+
+.main
+    padding-top: 12px
+    position: relative
+    z-index: 4
+    .wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+    &__text
+        margin-bottom: 19px
+        font-weight: 800
+        font-size: 30px
+        line-height: 36px
+        text-align: center
+        letter-spacing: 0.02em
+        color: #fff
+        @media screen and ( max-width: 560px )
+            font-size: 20px
+            line-height: normal
+    &__cards
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        overflow: hidden
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        -o-user-select: none
+        user-select: none
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        width: 350px
+        height: 330px
+        canvas
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 3
+
+
+
+.modal
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 10
+    background: rgba(#000, .7)
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    padding: 20px
+    overflow: auto
+    transition: all .3s ease
+    &.hidden
+        opacity: 0
+        pointer-events: none
+    .overlay
+        margin: auto 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        background: radial-gradient(91.16% 91.16% at 44.48% 50%, rgba(235, 26, 189, 0.5) 0%, rgba(98, 49, 238, 0.5) 100%)
+        background-color: #fff
+        border-radius: 60px
+        padding-top: 40px
+        padding-bottom: 40px
+        padding-left: 40px
+        padding-right: 40px
+        max-width: 350px
+        width: 100%
+        @media screen and ( max-width: 640px )
+            padding-top: 32px
+            padding-bottom: 80px
+            padding-left: 48px
+            padding-right: 48px
+        @media screen and ( max-width: 560px )
+            padding: 20px
+    &__logo
+        height: 76px
+        margin-bottom: 38px
+    &__text
+        font-weight: 800
+        font-size: 27px
+        text-align: center
+        letter-spacing: 0.02em
+        color: #000
+        margin-bottom: 30px
+        text-transform: uppercase
+        @media screen and ( max-width: 560px )
+            font-size: 28px
+        span
+            background: red
+            color: #fff
+            padding: 4px 20px
+            border-radius: 20px
+    &__bigText
+        font-weight: 800
+        font-size: 80px
+        text-align: center
+        letter-spacing: 0.02em
+        color: #fff
+        @media screen and ( max-width: 768px )
+            font-size: 116px
+            line-height: normal
+        @media screen and ( max-width: 560px )
+            font-size: 56px
+    &__button
+        background: #414141
+        border-radius: 30px
+        padding: 16px 10px
+        width: 100%
+        font-weight: 800
+        font-size: 38px
+        text-align: center
+        color: #fff
+        margin-top: 0
+        box-shadow: 0px 0px 75px 0px rgba(#fff, 1)
+        animation: buttonShadowAnimation 1.5s infinite
+        @media screen and ( max-width: 560px )
+            font-size: 28px
+    @keyframes buttonShadowAnimation
+        0%
+            box-shadow: 0px 0px 75px 20px rgba(#fff, 1)
+        50%
+            box-shadow: 0px 0px 75px 0px rgba(#fff, 1)
+        100%
+            box-shadow: 0px 0px 75px 20px rgba(#fff, 1)
+            
+            
+
+.footer
+    padding-top: 178px
+    padding-bottom: 40px
+    @media screen and ( max-width: 560px )
+        padding-top: 44px
+    .wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+    &__line
+        width: 90%
+        height: 4px
+        background-color: #EB1A25
+        margin-bottom: 27px
+    &__text
+        font-weight: 800
+        font-size: 30px
+        line-height: 36px
+        text-align: center
+        letter-spacing: 0.02em
+        color: #fff
+        @media screen and ( max-width: 560px )
+            font-size: 20px
+            line-height: normal
+        a
+            color: #fff
+            text-decoration: underline
