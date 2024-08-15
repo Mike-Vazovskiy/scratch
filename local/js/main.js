@@ -16,7 +16,7 @@ $(function(){
 		 brush        = new Image(),
 		 scratched    = 35;
 		  
-	image.src = '/local/assets/images/scratchImg.svg';
+	image.src = 'local/assets/images/scratchImg.svg';
 	
 	image.onload = function() {
 	  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
