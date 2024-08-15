@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 $('canvas').attr( 'height', $('.main__cards').height() );
 $('canvas').attr( 'width', $('.main__cards').width() );
 
@@ -144,3 +145,4 @@ $(function(){
 	  }
 	 
  });
+});
